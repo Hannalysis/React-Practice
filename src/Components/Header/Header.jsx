@@ -1,5 +1,5 @@
 
 export default function Header() {
-    return <h1>FlashCards helooo!!!</h1>
+    return <h1>FlashCards</h1>
     
 }

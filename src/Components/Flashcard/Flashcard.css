@@ -1,0 +1,6 @@
+.flashcard{
+    display: flex;
+    flex-grow: 1;
+    max-width: 30%;
+    min-width: 30%;
+}
