@@ -5,12 +5,12 @@ import "./Flashcard.css"
 let front = ["Why do you capitalize function names in React?",
     "What is JSX in React?","What is the difference between a class component and a functional component?",
      "What is a React hook?", "What is state in React?", "What is a prop in React?"];
-let back = ["In React, function names are capitalized because React uses the capitalization to distinguish between regular HTML elements (e.g., <div>, <p>) and React components. React components must start with a capital letter so that JSX can correctly interpret them as user-defined components, rather than native HTML tags.",
-    "AJSX (JavaScript XML) is a syntax extension for JavaScript that allows you to write HTML-like code inside JavaScript. React components are written in JSX, which is then transpiled into regular JavaScript by tools like Babel.",
-    "A class component is a JavaScript class that extends React.Component and has lifecycle methods, while a functional component is a simpler form of a React component defined as a function. With React hooks, functional components can now have state and side effects, which were previously only available in class components.",
-     "A React hook is a special function that allows you to use React features like state, context, and lifecycle methods in functional components. Examples of hooks include useState, useEffect, and useContext.",
-      "State is a JavaScript object that holds data or information about the component's condition. React components can have their own state, which can be updated to trigger a re-render of the component when it changes.",
-       "Props (short for properties) are inputs to a React component. They allow data to be passed from a parent component to a child component. Props are read-only and cannot be modified by the child component."];
+let back = ["Capitalized function names distinguish React components from HTML elements, ensuring JSX interprets them as user-defined components.",
+    "JSX is a syntax extension that allows writing HTML-like code in JavaScript, which is transpiled to regular JavaScript by Babel.",
+    "Class components extend React.Component with lifecycle methods, while functional components are simpler and use hooks for state and effects.",
+     "A React hook is a function that enables React features (e.g., state, context, lifecycle methods) in functional components.",
+      "State is an object that holds a component's data and triggers a re-render when updated.",
+       "Props are inputs passed from parent to child components and are read-only in the child component."];
 
 export default function Flashcard({value}) {
 

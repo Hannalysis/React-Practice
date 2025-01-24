@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,11 +28,13 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #254441
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin: 0;
 }
 
 button {
@@ -47,7 +49,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: white;
 }
 button:focus,
 button:focus-visible {
@@ -65,4 +67,64 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+form {
+  background-color: #60a9a2;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.question, .answer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.flash-title {
+  font-family: 'Helvetica Neue', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color:  #60a9a2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  text-transform: none;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  animation: burnEffect 1.5s infinite alternate; /* Animation for burning effect */
+}
+/* Keyframe animation for burning effect */
+@keyframes burnEffect {
+  0% {
+      text-shadow:
+          0 0 5px rgba(37, 68, 65, 0.8),
+          0 0 10px rgba(37, 68, 65, 0.8),
+          0 0 15px rgba(37, 68, 65, 0.7),
+          0 0 20px rgba(96, 169, 162, 1),
+          0 0 25px rgba(96, 169, 162, 0.8);
+      color: #254441;
+  }
+  50% {
+      text-shadow:
+          0 0 5px rgba(37, 68, 65, 0.9),
+          0 0 10px rgba(37, 68, 65, 0.9),
+          0 0 15px rgba(37, 68, 65, 0.8),
+          0 0 25px rgba(96, 169, 162, 1),
+          0 0 30px rgba(96, 169, 162, 0.9);
+      color: #60a9a2;
+  }
+  100% {
+      text-shadow:
+          0 0 5px rgba(37, 68, 65, 0.8),
+          0 0 15px rgba(37, 68, 65, 0.8),
+          0 0 20px rgba(96, 169, 162, 1),
+          0 0 25px rgba(96, 169, 162, 0.9),
+          0 0 30px rgba(96, 169, 162, 0.8);
+      color: #254441;
+  }
+}
+
+textarea {
+  background-color: lightgray;
 }

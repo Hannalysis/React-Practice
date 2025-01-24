@@ -1,6 +1,7 @@
 .flashcardsContainer{
     display: flex;
     flex-direction: column;
+    background-color: #60a9a2;
 }
 
 .row {
