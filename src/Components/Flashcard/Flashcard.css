@@ -1,0 +1,9 @@
+.flashcard{
+    display: flex;
+    flex-grow: 1;
+    max-width: 30%;
+    min-width: 30%;
+    width: 200px;
+    height: 200px;
+    border-style: border-box;
+}
