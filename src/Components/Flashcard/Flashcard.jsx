@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import ReactCardFlip from 'react-card-flip';
 import "./Flashcard.css"
 
 let front = ["Why do you capitalize function names in React?",
@@ -14,24 +15,30 @@ let back = ["Capitalized function names distinguish React components from HTML e
 
 export default function Flashcard({value}) {
 
-const [cardFace, setCardFace]= useState(front[value-1]);
+const [isFlipped, setIsFlipped] = useState(false);
 
-function handleClick() {
-    if (cardFace === front[value-1]) {
-        setCardFace(back[value-1])
-        console.log(`back ${value} ${back[value-1]}`)
-    }
-    else {
-        setCardFace(front[value-1])
-        console.log(`front ${value} ${front[value-1]}`)
-    }
-
+function handleClick(e) {
+    e.preventDefault();
+    setIsFlipped(!isFlipped);
 }
 
     return (
-        <button className = "flashcard" onClick = {handleClick} style= {{ border: "2px solid black", padding: "10px", margin: "10px"}} >
-        {cardFace}
-     </button>
+    <ReactCardFlip flipDirection = "horizontal" isFlipped = {isFlipped}>
+        <div>
+            <button className = "flashcard" 
+                    onClick = {handleClick} 
+                    style= {{ border: "2px solid black", padding: "10px", margin: "10px"}} >
+                {front[value-1]}
+            </button>
+        </div>
+        <div>
+            <button className = "flashcard" 
+                    onClick = {handleClick} 
+                    style= {{ border: "2px solid black", padding: "10px", margin: "10px"}} >
+                {back[value-1]}
+            </button>
+        </div>
+    </ReactCardFlip>
     )
     
 }

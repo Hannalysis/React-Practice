@@ -5,7 +5,7 @@ export default function Form() {
           <label htmlFor="question">Question:</label>
           <textarea
             id="question"
-            placeHolder="Enter your question"
+            placeholder="Enter your question"
             required></textarea>
             </div>
             <div className = "answer">
@@ -13,7 +13,7 @@ export default function Form() {
           <textarea
             id="answer"
             required
-            placeHolder="Enter your question"
+            placeholder="Enter your answer"
             ></textarea>
             </div>
         <button
