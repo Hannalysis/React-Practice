@@ -13,7 +13,10 @@ let back = ["Capitalized function names distinguish React components from HTML e
       "State is an object that holds a component's data and triggers a re-render when updated.",
        "Props are inputs passed from parent to child components and are read-only in the child component."];
 
-export default function Flashcard({value}) {
+// const flashCards = [{front: "front1", back: "back1"}]
+// const flashCards2 = [{card1: {front: "front2", back: "back2"}}]
+
+export default function Flashcard({card}) {
 
 const [isFlipped, setIsFlipped] = useState(false);
 
@@ -28,14 +31,14 @@ function handleClick(e) {
             <button className = "flashcard" 
                     onClick = {handleClick} 
                     style= {{ border: "2px solid black", padding: "10px", margin: "10px"}} >
-                {front[value-1]}
+                {card.front}
             </button>
         </div>
         <div>
             <button className = "flashcard" 
                     onClick = {handleClick} 
                     style= {{ border: "2px solid black", padding: "10px", margin: "10px"}} >
-                {back[value-1]}
+                {card.back}
             </button>
         </div>
     </ReactCardFlip>
